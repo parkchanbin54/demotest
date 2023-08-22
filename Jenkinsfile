@@ -8,7 +8,10 @@ pipeline {
         }
         stage('BE-Build') {
             steps {
-                    sh "./gradlew clean build --exclude-task test"
+                    sh '''
+                    cd demotest
+                    ./gradlew clean build --exclude-task test
+                    '''
                    }
         }
         stage('Deploy') {
