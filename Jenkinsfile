@@ -9,7 +9,7 @@ pipeline {
         stage('BE-Build') {
             steps {
                     sh '''
-                    cd demo
+                    cd demo/demo
                     ./gradlew clean build --exclude-task test
                     '''
                    }
