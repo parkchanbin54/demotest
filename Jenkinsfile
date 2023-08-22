@@ -10,7 +10,7 @@ pipeline {
             steps {
                     sh '''
                     cd demo/demo
-                    ./gradlew clean build --exclude-task test
+                    sudo ./gradlew clean build --exclude-task test
                     '''
                    }
         }
